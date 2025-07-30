@@ -43,3 +43,14 @@ readstream.on('data',(chunk)=>{
 });
 
 readstream.pipe(writestream);
+
+const http = require('http');
+
+const server =http.createServer((req,res)=>{
+    console.log("requests made");
+});
+
+server.listen(3000,'localhost',()=>{
+    console.log("listening to 3000");
+
+})
